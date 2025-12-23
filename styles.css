@@ -17,10 +17,9 @@
 }
 
 body {
-    background-image: url(images/floresta-fundo.jpg);
-    background-size: cover;
-    /* background: var(--cor-primaria);
-    background: linear-gradient(36deg,rgba(27, 33, 26, 1) 0%, rgba(98, 129, 65, 1) 46%, rgba(139, 174, 102, 0.84) 100%); */
+    /* background-image: url(images/floresta-fundo.jpg);
+    background-size: cover; */
+    background: radial-gradient(circle,rgba(87, 143, 76, 0.89) 0%, rgba(118, 153, 89, 1) 0%, rgba(0, 0, 0, 1) 67%);
     background-repeat: no-repeat;
     color: var(--cor-texto);
     font-family: var(--fonte-texto);
@@ -49,7 +48,7 @@ main div {
     background-color: rgba(98, 129, 65, .75);
     padding: 8px;
     margin: 16px 0;
-    border: solid var(--cor-primaria) 4px;
+    border: solid var(--cor-detalhes) 4px;
     border-radius: 16px;
 }
 
@@ -59,8 +58,9 @@ section {
     align-items: center;
     padding: 16px;
     border-radius: 24px;
-    background-color: rgba(139, 174, 102, 0.45);
-    border: solid var(--cor-primaria) 8px;
+    /* background-color: rgba(139, 174, 102, 0.45); */
+    background-color: rgba(98, 129, 65, .5);
+    border: solid var(--cor-primaria) 4px;
 }
 
 .secao-links {
@@ -76,6 +76,18 @@ section {
 .secao-timer {
     grid-column: 2 / 4;
     grid-row: 3;
+
+    /* background-color: var(--cor-detalhes); */
+    background: linear-gradient(0deg,rgba(129, 121, 97, 1) 12%, rgba(235, 213, 171, 1) 100%);
+    border: solid var(--cor-primaria) 4px;
+
+}
+
+.secao-timer>div {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    position: relative;
 }
 
 .secao-aleatoria {
@@ -92,6 +104,11 @@ section {
     background-color: rgba(98, 129, 65, .55);
     border: solid var(--cor-detalhes) 4px;
     border-radius: 16px;
+}
+
+.secao-timer h2 {
+    border-color: var(--cor-primaria);
+    background-color: var(--cor-primaria);
 }
 
 .lista-links {
@@ -149,6 +166,48 @@ section {
     font-weight: 600;
 }
 
+.btn-add-link:hover, .secao-modo button:hover {
+    background-color: var(--cor-primaria);
+    color: #FFFFFF;
+    transition-duration: .5s;
+}
+
+.btn-add-link, .secao-modo button {
+    transition-duration: .5s;
+}
+
+.timer {
+    margin: 0 auto;
+    font-size: 8rem;
+    line-height: 100%;
+    user-select: none;
+}
+
+.timer-btns {
+    position: absolute;
+    right: 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.timer-btns button {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-detalhes);
+    border: solid var(--cor-primaria) 3px;
+    cursor: pointer;
+}
+
+.timer-btns button:hover {
+    border-color: var(--cor-detalhes);
+}
 
 .secao-modo {
     padding: 0;
@@ -158,7 +217,7 @@ section {
 .secao-modo button {
     width: 100%;
     height: 100%;
-    border: solid var(--cor-primaria) 4px;
+    border: none;
     cursor: pointer;
 
     font-family: var(--fonte-texto);
